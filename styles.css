@@ -104,20 +104,6 @@ body {
     font-weight: bold;
 }
 
-.suggestion-meta {
-    font-size: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    color: #555;
-}
-
-.profile-section {
-    margin-top: 70px;
-    padding-top: 40px;
-    border-top: 2px dashed #111;
-}
-
 .hidden {
     display: none;
 }

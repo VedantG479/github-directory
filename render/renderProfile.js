@@ -15,7 +15,7 @@ export function renderProfile(details){
     profileSection.querySelector('.profile-details-box').innerHTML = `<p><strong>Name:</strong> ${name ? name : 'NA'}</p>
                                                                     <p><strong>Location:</strong> ${location ? location : 'NA'} </p>
                                                                     <p><strong>Company:</strong> ${company ? company : 'NA'} </p>
-                                                                    <p><strong>Website:</strong> ${email ? email : 'NA'}</p>
+                                                                    <p><strong>Email:</strong> ${email ? email : 'NA'}</p>
                                                                     <p><strong>Joined:</strong> ${created_at ? new Date(created_at).getFullYear() : 'NA'} </p>`
 
     profileSection.querySelector('.contribution-graph-img').src = `https://ghchart.rshah.org/${login}`

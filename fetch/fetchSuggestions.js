@@ -24,21 +24,11 @@ function fetchSuggestions(searchName){
         return response.json()
       })
       .then((data) => {
-        if(currRequestCounter != requestCounter)    return null
+        if(currRequestCounter !== requestCounter)    return null
         return data
       })
       .catch((error) => {
         console.log(error)
         return null
       })
-}
-
-export function getUserName(userId){
-    let matchingItem
-    if(!suggestionsList)   return
-
-    suggestionsList.forEach((suggestion) => {
-        if(suggestion.id == userId)  matchingItem = suggestion
-    })
-    return matchingItem.login
 }

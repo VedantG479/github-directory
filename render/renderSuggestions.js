@@ -7,23 +7,15 @@ export function renderSuggetions(suggestionsList){
         const userDetails = {
             id: suggestion.id,
             avatar: suggestion.avatar_url,
-            username: suggestion.login,
-            followers: suggestion.followers_url.length,
-            following: suggestion.following_url.length,
-            repos: suggestion.repos_url.length
+            username: suggestion.login
         }
         const {id, avatar, username, followers, following, repos} = userDetails
-        
-        suggestionHTML += `<div class="suggestion-item" data-id=${id}>
+
+        suggestionHTML += `<div class="suggestion-item" data-username=${username}>
                                 <img src="${avatar}" class="suggestion-avatar" />
 
                                 <div class="suggestion-info">
                                     <div class="suggestion-username">${username}</div>
-                                    <div class="suggestion-meta">
-                                        <span>Followers: ${followers}</span>
-                                        <span>Following: ${following}</span>
-                                        <span>Repos: ${repos}</span>
-                                    </div>
                                 </div>
                             </div>`
     })

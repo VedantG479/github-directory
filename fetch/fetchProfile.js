@@ -1,9 +1,11 @@
 import { renderProfile } from "../render/renderProfile.js"
+import { searchInput } from "../script.js"
 
 export function getUser(userName){
     fetchUser(userName)
       .then((details) => {
         if(!details)   return
+        searchInput.value = ''
         renderProfile(details)
       })
 }
