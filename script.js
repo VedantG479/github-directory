@@ -1,4 +1,5 @@
-import { handleSearch } from "./fetch/fetch.js"
+import { getUser } from "./fetch/fetchProfile.js"
+import { getUserName, handleSuggestions } from "./fetch/fetchSuggestions.js"
 import { clearSuggestions } from "./render/renderSuggestions.js"
 
 const searchInput = document.querySelector('.search-input')
@@ -9,12 +10,13 @@ searchInput.addEventListener('input', () => {
         clearSuggestions()
         return
     }
-
-    handleSearch(searchName)
+    handleSuggestions(searchName)
 })
 
 document.body.addEventListener('click', (e) => {
     const suggestedItem = e.target.closest('.suggestion-item')
     if(!suggestedItem)  return
-    console.log(suggestedItem.dataset.id)
+
+    getUser(getUserName(suggestedItem.dataset.id))
+    clearSuggestions()
 })

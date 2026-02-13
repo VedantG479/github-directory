@@ -1,19 +1,19 @@
 const suggestionContainer = document.querySelector('.suggestions-container')
 
-export function renderSuggetions(userList){
+export function renderSuggetions(suggestionsList){
     let suggestionHTML = ''
     
-    userList.forEach((user) => {
+    suggestionsList.forEach((suggestion) => {
         const userDetails = {
-            id: user.id,
-            avatar: user.avatar_url,
-            username: user.login,
-            followers: user.followers_url.length,
-            following: user.following_url.length,
-            repos: user.repos_url.length
+            id: suggestion.id,
+            avatar: suggestion.avatar_url,
+            username: suggestion.login,
+            followers: suggestion.followers_url.length,
+            following: suggestion.following_url.length,
+            repos: suggestion.repos_url.length
         }
         const {id, avatar, username, followers, following, repos} = userDetails
-
+        
         suggestionHTML += `<div class="suggestion-item" data-id=${id}>
                                 <img src="${avatar}" class="suggestion-avatar" />
 

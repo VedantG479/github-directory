@@ -121,3 +121,127 @@ body {
 .hidden {
     display: none;
 }
+
+.profile-section {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 70px;
+    padding-top: 70px;
+    border-top: 2px dashed #111;
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;  
+    justify-content: space-between; 
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #111;
+    box-shadow: 6px 6px 0px #111;
+}
+
+.profile-main-info {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-username {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.profile-stats-row {
+    display: flex;
+    gap: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #555;
+}
+
+.profile-details-box {
+    padding: 15px;
+    border: 2px solid #111;
+    box-shadow: 6px 6px 0px #111;
+    background: #ffffff;
+    font-size: 18px;
+}
+
+.profile-details-box p {
+    margin-bottom: 10px;
+}
+
+.profile-bottom {
+    margin-top: 20px;
+}
+
+.section-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.graph-wrapper {
+    padding: 20px;
+    border: 2px solid #111;
+    box-shadow: 6px 6px 0px #111;
+    background: #ffffff;
+}
+
+.contribution-graph-img {
+    width: 100%;
+    display: block;
+}
+
+.profile-username-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-username {
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.2s ease;
+}
+
+.redirect-arrow {
+    font-size: 18px;
+    margin-left: 8px;
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+.profile-username-link:hover .profile-username {
+    text-decoration: underline;
+}
+
+.profile-username-link:hover .redirect-arrow {
+    opacity: 1;
+}
+
+.graph-subtext {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
